@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string str;
+
+    std::cout << "Введіть рядок: ";
+    std::getline(std::cin, str);
+
+    for (char& ch : str) {
+        if (ch == '.') {
+            ch = '!';
+        }
+    }
+
+    std::cout << "Результат: " << str << std::endl;
+
+    return 0;
+}
