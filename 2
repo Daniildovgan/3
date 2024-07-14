@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+int main() {
+    std::string str;
+    std::cout << "Введіть рядок: ";
+    std::getline(std::cin, str);
+
+    int letters = 0, digits = 0, others = 0;
+
+    for (char ch : str) {
+        if (std::isalpha(ch)) {
+            letters++;
+        } else if (std::isdigit(ch)) {
+            digits++;
+        } else {
+            others++;
+        }
+    }
+
+    std::cout << "Кількість літер: " << letters << std::endl;
+    std::cout << "Кількість цифр: " << digits << std::endl;
+    std::cout << "Кількість інших символів: " << others << std::endl;
+
+    return 0;
+}
