@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string str;
+    char symbol;
+    std::cout << "Введіть рядок символів: ";
+    std::getline(std::cin, str);
+    std::cout << "Введіть шуканий символ: ";
+    std::cin >> symbol;
+
+    int count = 0;
+    for (char ch : str) {
+        if (ch == symbol) {
+            count++;
+        }
+    }
+
+    std::cout << "Символ '" << symbol << "' зустрічається " << count << " разів у рядку." << std::endl;
+
+    return 0;
+}
